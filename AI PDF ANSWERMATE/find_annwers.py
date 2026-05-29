@@ -50,7 +50,7 @@ for i,pro in enumerate(questions):
     ####USE MISTRAL API 
    
     response = client.chat.complete(
-        model="ministral-3b-latest",
+        model="mistral-small-latest" ,
         messages=[
             {
                 "role": "user",
@@ -59,5 +59,7 @@ for i,pro in enumerate(questions):
         ]
     )
     opt= response.choices[0].message.content
-    with open("answers.txt", "w",encoding="utf-8") as file:
-        file.write(pro + "\n" + opt)  
+    print(opt)
+    
+
+    
